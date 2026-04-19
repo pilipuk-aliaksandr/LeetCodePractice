@@ -1,10 +1,10 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LongestHarmoniousSubsequence {
-    public int findLHS(int[] nums) {
+    public static int findLHS(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
@@ -25,7 +25,6 @@ public class LongestHarmoniousSubsequence {
 
     public static void main(String[] args) {
         int[] nums = new int[] {1,3,2,2,5,2,3,7};
-        LongestHarmoniousSubsequence longestHarmoniousSubsequence = new LongestHarmoniousSubsequence();
-        System.out.println(longestHarmoniousSubsequence.findLHS(nums));
+        System.out.println(findLHS(nums));
     }
 }

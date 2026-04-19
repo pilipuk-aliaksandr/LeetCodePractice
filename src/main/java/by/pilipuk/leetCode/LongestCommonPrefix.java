@@ -1,10 +1,10 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class LongestCommonPrefix {
-    public String longestCommonPrefix(String[] strs) {
+    public static String longestCommonPrefix(String[] strs) {
         var prefix = Arrays.stream(strs)
                 .min(Comparator.comparingInt(String::length)).orElse("");
         if (prefix.isEmpty()) {

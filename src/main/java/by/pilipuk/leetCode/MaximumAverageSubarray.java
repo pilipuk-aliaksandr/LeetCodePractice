@@ -1,7 +1,7 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class MaximumAverageSubarray {
-    public double findMaxAverage(int[] nums, int k) {
+    public static double findMaxAverage(int[] nums, int k) {
         double maxAvg = Integer.MIN_VALUE;
 
         int[] arr = new int[nums.length + 1];
@@ -24,7 +24,6 @@ public class MaximumAverageSubarray {
 
     public static void main(String[] args) {
         int[] nums = new int[]{5};
-        MaximumAverageSubarray maximumAverageSubarray = new MaximumAverageSubarray();
-        System.out.println(maximumAverageSubarray.findMaxAverage(nums, 1));
+        System.out.println(findMaxAverage(nums, 1));
     }
 }

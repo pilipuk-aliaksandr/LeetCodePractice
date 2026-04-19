@@ -1,7 +1,7 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class LongestPalindromicSubstring {
-    public String longestPalindrome(String s) {
+    public static String longestPalindrome(String s) {
         StringBuilder result = new StringBuilder();
         int maxLength = 0;
 
@@ -45,8 +45,7 @@ public class LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
-        System.out.println(longestPalindromicSubstring.longestPalindrome("babad"));
+        System.out.println(longestPalindrome("babad"));
     }
 }
 

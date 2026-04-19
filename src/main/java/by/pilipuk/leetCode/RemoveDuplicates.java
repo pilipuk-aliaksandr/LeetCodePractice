@@ -1,7 +1,7 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class RemoveDuplicates {
-    public int removeDuplicates(int[] nums) {
+    public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
 
         int slow = 0;
@@ -16,7 +16,6 @@ public class RemoveDuplicates {
 
     public static void main(String[] args) {
         int[] nums = new int[] {1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10, 10};
-        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
-        System.out.println(removeDuplicates.removeDuplicates(nums));
+        System.out.println(removeDuplicates(nums));
     }
 }

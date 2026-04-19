@@ -1,7 +1,7 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class FindIndex {
-    public int strStr(String haystack, String needle) {
+    public static int strStr(String haystack, String needle) {
         int hLen = haystack.length();
         int nLen = needle.length();
 
@@ -16,7 +16,6 @@ public class FindIndex {
 
     public static void main(String[] args) {
         String haystack = "mississippi", needle = "issip";
-        FindIndex findIndex = new FindIndex();
-        System.out.println(findIndex.strStr(haystack, needle));
+        System.out.println(strStr(haystack, needle));
     }
 }

@@ -1,6 +1,4 @@
-package by.pilipuk;
-
-import java.util.Arrays;
+package by.pilipuk.leetCode;
 
 public class Main {
     public static void main(String[] args) {

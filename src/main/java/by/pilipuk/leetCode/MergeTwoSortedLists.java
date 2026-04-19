@@ -1,8 +1,8 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class MergeTwoSortedLists {
 
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         ListNode res = new ListNode(0);
         ListNode cur = res;

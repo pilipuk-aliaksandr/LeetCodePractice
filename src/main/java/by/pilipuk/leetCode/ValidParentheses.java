@@ -1,7 +1,7 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class ValidParentheses {
-    public boolean isValid(String s) {
+    public static boolean isValid(String s) {
 
         int kr = 0;
         int kv = 0;
@@ -17,7 +17,7 @@ public class ValidParentheses {
             }
             switch (symbol) {
                 case "(" -> {
-                    if (nextSymbol.equals("]") || nextSymbol.equals("}") || nextSymbol.equals("")) {
+                    if (nextSymbol.equals("]") || nextSymbol.equals("}") || nextSymbol.isEmpty()) {
                         kr = -10000;
                     } else {
                         kr -= 1;
@@ -31,7 +31,7 @@ public class ValidParentheses {
                     }
                 }
                 case "{" -> {
-                    if (nextSymbol.equals(")") || nextSymbol.equals("]") || nextSymbol.equals("")) {
+                    if (nextSymbol.equals(")") || nextSymbol.equals("]") || nextSymbol.isEmpty()) {
                         fig = -10000;
                     } else {
                         fig -= 1;

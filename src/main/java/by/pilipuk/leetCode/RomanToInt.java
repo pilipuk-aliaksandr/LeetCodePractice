@@ -1,7 +1,7 @@
-package by.pilipuk;
+package by.pilipuk.leetCode;
 
 public class RomanToInt {
-    public int romanToInt(String s) {
+    public static int romanToInt(String s) {
         int result = 0;
         for (int i = 0; i < s.length(); i++) {
             int current = switch(s.charAt(i)) {
