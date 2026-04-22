@@ -16,6 +16,6 @@ public class Main {
 //        System.out.println("");
 
         ValidParentheses validParentheses = new ValidParentheses();
-        System.out.println(validParentheses.isValid("([)]"));
+        System.out.println(validParentheses.isValid1("([)]"));
     }
 }
