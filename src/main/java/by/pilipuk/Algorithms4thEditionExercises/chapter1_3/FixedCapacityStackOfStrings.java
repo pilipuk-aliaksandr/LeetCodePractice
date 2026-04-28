@@ -1,6 +1,10 @@
 package by.pilipuk.Algorithms4thEditionExercises.chapter1_3;
 
-public class FixedCapacityStackOfStrings {
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+public class FixedCapacityStackOfStrings implements Iterable<String> {
     private String[] a;
     private int n;
 
@@ -50,5 +54,31 @@ public class FixedCapacityStackOfStrings {
             a[i] = oldA[i];
         }
         return a;
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        Iterator<String> iterator = new Iterator<>() {
+            @Override
+            public boolean hasNext() {
+                return !isEmpty();
+            }
+
+            @Override
+            public String next() {
+                return pop();
+            }
+        };
+        return iterator;
+    }
+
+    @Override
+    public void forEach(Consumer<? super String> action) {
+        Iterable.super.forEach(action);
+    }
+
+    @Override
+    public Spliterator<String> spliterator() {
+        return Iterable.super.spliterator();
     }
 }

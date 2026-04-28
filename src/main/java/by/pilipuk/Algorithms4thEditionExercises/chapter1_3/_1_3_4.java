@@ -6,9 +6,12 @@ public class _1_3_4 {
     public static void main(String[] args) {
         char[] chars = new char[] {'[', '(', ')', ']', '{', '}', '{', '[', '(', ')', '(', ')', ']', '(', ')', '}'};
         char[] chars1 = new char[] {'[', '(', ']', ')'};
+        char[] chars2 = new char[] {'{', '[', '(', '}', ')', ']'};
         System.out.println(isValid(chars));
         System.out.println();
         System.out.println(isValid(chars1));
+        System.out.println();
+        System.out.println(isValid(chars2));
     }
 
     public static boolean isValid(char[] chars) {

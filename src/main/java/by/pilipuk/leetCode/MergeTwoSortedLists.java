@@ -2,10 +2,10 @@ package by.pilipuk.leetCode;
 
 public class MergeTwoSortedLists {
 
-    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode1 mergeTwoLists(ListNode1 list1, ListNode1 list2) {
 
-        ListNode res = new ListNode(0);
-        ListNode cur = res;
+        ListNode1 res = new ListNode1(0);
+        ListNode1 cur = res;
 
         while (list1 != null && list2 != null) {
             if (list1.val <= list2.val) {
@@ -28,18 +28,18 @@ public class MergeTwoSortedLists {
     }
 }
 
-class ListNode {
+class ListNode1 {
     int val;
-    ListNode next;
+    ListNode1 next;
 
-    ListNode() {
+    ListNode1() {
     }
 
-    ListNode(int val) {
+    ListNode1(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    ListNode1(int val, ListNode1 next) {
         this.val = val;
         this.next = next;
     }
