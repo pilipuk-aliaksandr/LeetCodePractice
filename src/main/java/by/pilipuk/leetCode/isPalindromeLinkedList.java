@@ -7,22 +7,18 @@ public class isPalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
         Deque<Integer> stack = new ArrayDeque<>();
 
-        if (head.next == null) {
-            return true;
-        }
-
-        stack.push(head.val);
-
         ListNode headFast = head;
 
-        while (headFast.next != null && headFast.next.next != null) {
-            head = head.next;
+        while (headFast != null && headFast.next != null) {
             stack.push(head.val);
+            head = head.next;
 
             headFast = headFast.next.next;
         }
 
-        head = head.next;
+        if (headFast != null) {
+            head = head.next;
+        }
 
         while (!stack.isEmpty() && stack.peek() == head.val) {
             stack.pop();
