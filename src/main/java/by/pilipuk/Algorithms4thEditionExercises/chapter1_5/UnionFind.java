@@ -2,7 +2,7 @@ package by.pilipuk.Algorithms4thEditionExercises.chapter1_5;
 
 public class UnionFind {
 
-    private int[] id;
+    private final int[] id;
     private int count;
 
     public UnionFind(int n) {
@@ -26,7 +26,16 @@ public class UnionFind {
     }
 
     public void union(int p, int q) {
-        id[p] = id[q];
+        int pId = find(p);
+        int qId = find(q);
+        if (pId == qId) {
+            return;
+        }
+        for (int i = 0; i < id.length; i++) {
+            if (id[i] == pId) {
+                id[i] = qId;
+            }
+        }
         count--;
     }
 }
